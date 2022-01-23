@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="CaseManagement.View.AddCustomerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CaseManagement.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="16*"/>
+            <RowDefinition Height="182*"/>
+            <RowDefinition Height="27*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock FontSize="14" FontWeight="Bold">Add Customer</TextBlock>
+        <StackPanel Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" Margin="0 0 5 0">
+            <TextBlock Margin="0 0 0 2" FontWeight="SemiBold">First name</TextBlock>
+            <TextBox Text="{Binding FirstName}" />
+
+            <TextBlock Margin="0 10 0 2" FontWeight="SemiBold">Last name</TextBlock>
+            <TextBox Text="{Binding LastName}" />
+
+            <TextBlock Margin="0 10 0 2" FontWeight="SemiBold">Email</TextBlock>
+            <TextBox Text="{Binding Email}" />
+
+            <TextBlock Margin="0 10 0 2" FontWeight="SemiBold">Mobile</TextBlock>
+            <TextBox Text="{Binding Mobile}"/>
+
+            <TextBlock Margin="0 10 0 2" FontWeight="SemiBold">Phone</TextBlock>
+            <TextBox Text="{Binding Phone}" />
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Margin="5 0 0 0">
+            <TextBlock Margin="0 0 0 2" FontWeight="SemiBold">Street</TextBlock>
+            <TextBox Text="{Binding Street}"/>
+
+            <TextBlock Margin="0 10 0 2" FontWeight="SemiBold">Postcode</TextBlock>
+            <TextBox Text="{Binding Postcode}" />
+
+            <TextBlock Margin="0 10 0 2" FontWeight="SemiBold">City</TextBlock>
+            <TextBox Text="{Binding City}"/>
+
+            <TextBlock Margin="0 10 0 2" FontWeight="SemiBold">Country</TextBlock>
+            <TextBox Text="{Binding Country}" />
+
+        </StackPanel>
+
+        <Button Grid.Column="1" Grid.Row="2" FontWeight="Bold" Content="SAVE" Command="{Binding SaveCustomerCommand}"/>
+
+    </Grid>
+
+</UserControl>

@@ -1,0 +1,38 @@
+﻿<Application x:Class="CaseManagement.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:view="clr-namespace:CaseManagement.View"
+             xmlns:viewModel="clr-namespace:CaseManagement.ViewModel"
+             xmlns:local="clr-namespace:CaseManagement">
+    
+    <Application.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Templates/MenuItemTemplate.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type viewModel:AddCustomerViewModel}">
+                <view:AddCustomerView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:AddCaseViewModel}">
+                <view:AddCaseView />
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:ListCustomersViewModel}">
+                <view:ListCustomersView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:ListCasesViewModel}">
+                <view:ListCasesView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
+                <view:HomeView/>
+            </DataTemplate>
+             
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
